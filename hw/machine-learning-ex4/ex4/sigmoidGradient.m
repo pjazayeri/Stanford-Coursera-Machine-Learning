@@ -15,9 +15,10 @@ g = zeros(size(z));
 
 
 
+% EPSILON = 0.00001
+% g = (sigmoid(z+EPSILON) - sigmoid(z-EPSILON) ) / (2 * EPSILON  );
 
-
-
+g = sigmoid(z) .* (1 - sigmoid(z));
 
 
 
