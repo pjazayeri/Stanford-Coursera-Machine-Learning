@@ -98,9 +98,13 @@ while ~isempty(email_contents)
     %
 
 
+    %if str in vocabList then word_indices.add(index of vocabList)
 
-
-
+    for i = 1:length(vocabList)
+        if( strcmp(str,vocabList{i}) )
+            word_indices = [word_indices , i ];
+        end
+    end
 
 
 

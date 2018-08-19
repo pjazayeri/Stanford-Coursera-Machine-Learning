@@ -24,9 +24,26 @@ sigma = 0.3;
 %
 
 
+% min_cost = 99999999999;
+% iter = 1;
+% for C_temp = [ 0.01 0.03 0.1 0.3 1 3]
+%     for sigma_temp = [0.01 0.03 0.1 0.3 1 3];
+%         model= svmTrain(X, y, C_temp, @(x1, x2) gaussianKernel(x1, x2, sigma_temp)); 
+%         predictions = svmPredict(model,Xval);
+%         if (min_cost > mean(double(predictions ~= yval)))
+%             min_cost = mean(double(predictions ~= yval));
+%             C = C_temp;
+%             sigma = sigma_temp;
+%             fprintf(['C = %f \n sigma = %f \n min_cost = %f\n' ], C, sigma, min_cost);
+%         end
+%         fprintf(['iteration: %f\n'], iter) 
+%         iter = iter+1;
+%     end
+% end
+% fprintf(['C = %f \n sigma = %f \n min_cost = %f\n' ], C, sigma, min_cost);
 
-
-
+            C = 1;
+            sigma = .1;
 
 
 % =========================================================================
